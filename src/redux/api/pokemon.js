@@ -1,9 +1,3 @@
-import axios from 'axios';
+const axios = require('axios');
 
-const findPokemons = () => {
-  axios.get(`https://pokeapi.co/api/v2/pokemon`).then((res) => {
-    return res.data;
-  });
-};
-
-export { findPokemons };
+export const findPokemons = (url) => axios.get(url);

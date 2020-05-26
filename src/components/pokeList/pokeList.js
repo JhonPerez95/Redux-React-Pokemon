@@ -1,21 +1,23 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Container from './container';
 import { useSelector, useDispatch } from 'react-redux';
 
-import * as actions from '../../redux/actions/pokeList';
-import { Button } from '@material-ui/core';
+import { doFindPokemon } from '../../redux/actions/pokeList';
 
-const PokeList = ({ doFindPokemon }) => {
-  const pokemons = useSelector((store) => store.pokeList);
+const PokeList = ({}) => {
+  const pokemons = useSelector((store) => store.pokeList.pokemons);
   const dispatch = useDispatch();
 
+  useEffect(() => {}, []);
+
   // dispatch(doFindPokemon());
-  console.log(pokemons);
 
   return (
     <>
       <Container />
-      <Button onClick={() => dispatch(actions.doFindPokemon())}> Prueba</Button>
+      {/* {pokemons.map((pokemon) => (
+        <p>{pokemon.name}</p>
+      ))} */}
     </>
   );
 };
