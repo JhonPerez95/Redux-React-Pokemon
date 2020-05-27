@@ -9,7 +9,7 @@ function reducer(state = { pokemons: [] }, action) {
     case START_GET_POKEMONS:
       return {
         ...state,
-        pokemons: action.payload,
+        // pokemons: action.payload,
       };
     case SUCCESS_GET_POKEMONS:
       return {

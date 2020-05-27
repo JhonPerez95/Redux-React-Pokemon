@@ -1,11 +1,7 @@
 import React from 'react';
 
 const Container = () => {
-  return (
-    <>
-      <h1>List of Pokemons</h1>
-    </>
-  );
+  return <></>;
 };
 
 export default Container;
