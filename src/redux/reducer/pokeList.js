@@ -4,7 +4,7 @@ import {
   POKEMONS_ERROR,
 } from '../actions/pokeList';
 
-function reducer(state = {}, action) {
+function reducer(state = { pokemons: [] }, action) {
   switch (action.type) {
     case START_GET_POKEMONS:
       return {

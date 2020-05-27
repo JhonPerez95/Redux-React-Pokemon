@@ -5,7 +5,7 @@ import { findPokemons } from '../api/pokemon';
 function* getPokemons(action) {
   try {
     // const result = yield call(fetchPokemons, action.payload.data)
-    const { results } = yield call(findPokemons);
+    const { results } = yield call(findPokemons, action.payload);
     // console.log(results);
     yield put(doFindPokemonSuccess(results));
   } catch (error) {

@@ -8,21 +8,16 @@ const PokeList = () => {
   const { pokemons } = useSelector((store) => store.pokeList);
   const dispatch = useDispatch();
 
-  // useEffect(() => {
-  //   dispatch(doFindPokemon());
-  // });
+  useEffect(() => {
+    if (pokemons.length === 0) {
+      dispatch(doFindPokemon());
+    }
+  }, []);
 
   console.log(pokemons);
   return (
     <>
       <Container />
-      <button
-        onClick={() => {
-          dispatch(doFindPokemon());
-        }}
-      >
-        pokemons
-      </button>
     </>
   );
 };
