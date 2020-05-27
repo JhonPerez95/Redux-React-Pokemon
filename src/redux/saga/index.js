@@ -1,7 +1,9 @@
-import { all } from 'redux-saga/effects';
+import { takeEvery, all } from 'redux-saga/effects';
+import { START_GET_POKEMONS } from '../actions/pokeList';
+import { getPokemons } from './pokemon';
 
-import renderPokemon from './pokemon';
-
-export default function* rootSaga() {
-  yield all([renderPokemon()]);
+function* watchAll() {
+  yield all([takeEvery(START_GET_POKEMONS, getPokemons)]);
 }
+
+export default watchAll;

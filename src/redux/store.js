@@ -7,8 +7,16 @@ import rootSaga from './saga/';
 // Create Saga
 const sagaMiddleware = createSagaMiddleware();
 
+// const initialStore = {
+//   pokemons: {},
+// };
+
 // Initialize Store  - State
-const store = createStore(rootReducer, applyMiddleware(sagaMiddleware));
+const store = createStore(
+  rootReducer,
+  // initialStore,
+  applyMiddleware(sagaMiddleware)
+);
 
 // initialize Saga
 sagaMiddleware.run(rootSaga);

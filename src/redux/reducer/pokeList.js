@@ -1,25 +1,27 @@
-import { START_GET_POKEMONS } from '../actions/pokeList';
-import { get } from 'lodash';
+import {
+  START_GET_POKEMONS,
+  SUCCESS_GET_POKEMONS,
+  POKEMONS_ERROR,
+} from '../actions/pokeList';
 
-// State Default
-const initialStore = {
-  pokemons: [],
-};
-
-function reducer(state = initialStore, action) {
+function reducer(state = {}, action) {
   switch (action.type) {
     case START_GET_POKEMONS:
       return {
         ...state,
-        pokemons: get(action, 'results'),
+        pokemons: action.payload,
+      };
+    case SUCCESS_GET_POKEMONS:
+      return {
+        ...state,
+        pokemons: action.payload,
       };
 
-    // case FIND_POKEMONS_ERROR:
-    //   return {
-    //     ...state,
-    //     pokemons: action.payload,
-    //     message: 'Error al cargar los Pokemons',
-    //   };
+    case POKEMONS_ERROR:
+      return {
+        ...state,
+        pokemons: action.payload,
+      };
 
     default:
       return state;
