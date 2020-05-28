@@ -1,7 +1,7 @@
 import {
   START_GET_POKEMONS,
   SUCCESS_GET_POKEMONS,
-  POKEMONS_ERROR,
+  ERROR_GET_POKEMONS,
 } from '../actions/pokeList';
 
 function reducer(state = { pokemons: [] }, action) {
@@ -17,7 +17,7 @@ function reducer(state = { pokemons: [] }, action) {
         pokemons: action.payload,
       };
 
-    case POKEMONS_ERROR:
+    case ERROR_GET_POKEMONS:
       return {
         ...state,
         pokemons: action.payload,

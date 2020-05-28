@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import store from './redux/store';
 
 import pokeList from './components/pokeList/pokeList';
+import pokeInfo from './components/pokeInfo/pokeInfo';
 import AppBar from './components/appBar/appBar';
 
 const Root = (
@@ -12,6 +13,7 @@ const Root = (
     <Router>
       <AppBar></AppBar>
       <Route path="/pokelist" component={pokeList} />
+      <Route path="/poke-info" component={pokeInfo} />
     </Router>
   </Provider>
 );
