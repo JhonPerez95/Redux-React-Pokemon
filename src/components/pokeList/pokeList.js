@@ -27,7 +27,7 @@ const PokeList = () => {
           return (
             <PokeCard
               name={poke.name}
-              to="/poke-info/"
+              to={`/poke-info/${id}`}
               image={`${url}${id}.png?raw=true`}
               key={id}
             />

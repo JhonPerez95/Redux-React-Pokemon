@@ -16,7 +16,7 @@ export const doSuccesInfo = (payload) => {
   };
 };
 
-export const doErrorInfo = () => {
+export const doErrorInfo = (payload) => {
   return {
     type: ERROR_INFO_POKEMON,
     payload,

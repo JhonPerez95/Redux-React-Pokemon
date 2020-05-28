@@ -11,9 +11,9 @@ import AppBar from './components/appBar/appBar';
 const Root = (
   <Provider store={store}>
     <Router>
-      <AppBar></AppBar>
+      <AppBar />
       <Route path="/pokelist" component={pokeList} />
-      <Route path="/poke-info" component={pokeInfo} />
+      <Route path="/poke-info/:id/" component={pokeInfo} />
     </Router>
   </Provider>
 );

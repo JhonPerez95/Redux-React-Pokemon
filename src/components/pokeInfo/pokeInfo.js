@@ -1,13 +1,26 @@
 import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 
-import PokeCard from '../pokeCard/pokeCard';
+// import PokeCard from '../pokeCard/pokeCard';
+import { doInfoPokemons } from '../../redux/actions/pokeInfo';
 
-function pokeInfo() {
+const PokeInfo = ({ match }) => {
+  const info = useSelector((state) => state);
+  const dispatch = useDispatch();
+  const id = match.params.id;
+
+  useEffect(() => {
+    dispatch(doInfoPokemons(id));
+  }, []);
+  console.log(info);
+
   return (
     <>
-      <PokeCard />
+      <p> aqui va info del pokemon</p>
+      <p> id: {id}</p>
+      {/* <PokeCard /> */}
     </>
   );
-}
+};
 
-export default pokeInfo;
+export default PokeInfo;
