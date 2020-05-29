@@ -4,7 +4,10 @@ import {
   ERROR_INFO_POKEMON,
 } from '../actions/pokeInfo';
 
-function pokeInfo(state = { infoPokemon: [] }, action) {
+function pokeInfo(
+  state = { infoPokemon: { name: '', description: '' } },
+  action
+) {
   switch (action.type) {
     case START_INFO_POKEMON:
       return {

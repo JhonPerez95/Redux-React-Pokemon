@@ -1,24 +1,33 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { Grid } from '@material-ui/core';
 
-// import PokeCard from '../pokeCard/pokeCard';
+import PokeCard from '../pokeCard/pokeCard';
 import { doInfoPokemons } from '../../redux/actions/pokeInfo';
 
 const PokeInfo = ({ match }) => {
-  const info = useSelector((state) => state);
+  const { name, description } = useSelector(
+    (state) => state.pokeInfo.infoPokemon
+  );
   const dispatch = useDispatch();
   const id = match.params.id;
+
+  let url =
+    'https://github.com/PokeAPI/sprites/blob/master/sprites/pokemon/other-sprites/official-artwork/';
 
   useEffect(() => {
     dispatch(doInfoPokemons(id));
   }, []);
-  console.log(info);
 
   return (
     <>
-      <p> aqui va info del pokemon</p>
-      <p> id: {id}</p>
-      {/* <PokeCard /> */}
+      <Grid container justify="center">
+        <PokeCard
+          image={`${url}${id}.png?raw=true`}
+          name={name}
+          description={description}
+        />
+      </Grid>
     </>
   );
 };
