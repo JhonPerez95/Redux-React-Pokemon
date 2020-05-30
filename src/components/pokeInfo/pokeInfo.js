@@ -17,7 +17,7 @@ const PokeInfo = ({ match }) => {
 
   useEffect(() => {
     dispatch(doInfoPokemons(id));
-  }, []);
+  }, [id]);
 
   return (
     <>
