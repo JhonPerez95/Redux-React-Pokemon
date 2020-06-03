@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/JhonPerez95/Redux-React-Pokemon/static/js/main.53a6b6a8.chunk.js",
+    "main.js.map": "/JhonPerez95/Redux-React-Pokemon/static/js/main.53a6b6a8.chunk.js.map",
+    "runtime-main.js": "/JhonPerez95/Redux-React-Pokemon/static/js/runtime-main.4e9d1c61.js",
+    "runtime-main.js.map": "/JhonPerez95/Redux-React-Pokemon/static/js/runtime-main.4e9d1c61.js.map",
+    "static/js/2.4347ba40.chunk.js": "/JhonPerez95/Redux-React-Pokemon/static/js/2.4347ba40.chunk.js",
+    "static/js/2.4347ba40.chunk.js.map": "/JhonPerez95/Redux-React-Pokemon/static/js/2.4347ba40.chunk.js.map",
+    "index.html": "/JhonPerez95/Redux-React-Pokemon/index.html",
+    "precache-manifest.077ce7811e1ae32b4f88841a0e63b513.js": "/JhonPerez95/Redux-React-Pokemon/precache-manifest.077ce7811e1ae32b4f88841a0e63b513.js",
+    "service-worker.js": "/JhonPerez95/Redux-React-Pokemon/service-worker.js",
+    "static/js/2.4347ba40.chunk.js.LICENSE.txt": "/JhonPerez95/Redux-React-Pokemon/static/js/2.4347ba40.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4e9d1c61.js",
+    "static/js/2.4347ba40.chunk.js",
+    "static/js/main.53a6b6a8.chunk.js"
+  ]
+}
