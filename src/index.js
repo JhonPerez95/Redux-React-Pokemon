@@ -1,21 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
+
 import store from './redux/store';
+import App from './app';
 
-import pokeList from './components/pokeList/pokeList';
-import pokeInfo from './components/pokeInfo/pokeInfo';
-import AppBar from './components/appBar/appBar';
-
-const Root = (
+ReactDOM.render(
   <Provider store={store}>
-    <Router>
-      <AppBar />
-      <Route path="/pokelist" component={pokeList} />
-      <Route path="/poke-info/:id/" component={pokeInfo} />
-    </Router>
-  </Provider>
+    <App />
+  </Provider>,
+  document.getElementById('root')
 );
-
-ReactDOM.render(Root, document.getElementById('root'));
