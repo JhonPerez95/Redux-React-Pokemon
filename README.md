@@ -2,4 +2,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Link Produccion:
 
-https://jhonperez95.github.io/pokelist
+https://jhonperez95.github.io/Redux-React-Pokemon/
